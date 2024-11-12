@@ -1,0 +1,100 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e0e5ec);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container for Centering Content */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Heading Styling */
+h1 {
+    color: #3b3a55;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styling */
+p {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.button {
+    padding: 12px 24px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 6px 12px rgba(74, 144, 226, 0.3);
+}
+
+/* Button Hover Effect */
+.button:hover {
+    background-color: #357abd;
+    transform: translateY(-3px);
+}
+
+/* Section Styling */
+.section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Admin Page Section Styling */
+#admin-page {
+    background-color: #e6f7ff;
+}
+
+/* Counter Section Styling */
+#counter-section {
+    background-color: #fffbea;
+}
+
+/* Counter Text Styling */
+.counter-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+/* Alert Box Styling */
+.alert {
+    color: #d9534f;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+/* Smooth Reveal for Sections */
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
