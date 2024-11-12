@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Detection and Access Control Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Voice Detection and Access Control Demo</h1>
+        <p>Use this site to demonstrate access control issues.</p>
+
+        <!-- Button to Enter Admin Page -->
+        <button class="button" onclick="checkAccess()">Enter Admin Page</button>
+
+        <!-- Alert Message -->
+        <p id="alert" class="alert"></p>
+
+        <!-- Admin Page Section -->
+        <div id="admin-page" class="section">
+            <h2>Admin Page</h2>
+            <p>Welcome to the admin-only section. Only admins should access this!</p>
+        </div>
+
+        <!-- Counter Section -->
+        <div id="counter-section" class="section">
+            <h2>Counter</h2>
+            <p>Count: <span id="counter">0</span></p>
+            <button class="button" onclick="adminOnlyCounter()">Increment Counter</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
