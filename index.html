@@ -3,24 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice Detection</title>
+    <title>Voice Detection Demo Site</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Voice Detection</h1>
-        <p>Presented by group 9 for "Software Security 314" course.</p>
+        <!-- Main Page Content -->
+        <h1>Welcome to Our Demo Site</h1>
+        <p>Your one-stop platform for voice detection and news updates.</p>
+
+        <!-- Latest News Panel -->
+        <div class="news-panel">
+            <h2>Latest News</h2>
+            <p>Stay up to date with the latest updates and announcements.</p>
+            <ul>
+                <li>System Maintenance scheduled for tomorrow at 3 AM.</li>
+                <li>New feature updates will be available next week!</li>
+                <li>Happy Holidays! Office will be closed on Dec 25th.</li>
+            </ul>
+        </div>
 
         <!-- Button to Enter Admin Page -->
-        <button class="button" onclick="checkAccess()">Enter Admin Page</button>
-
-        <!-- Alert Message -->
+        <button class="button" onclick="checkAccess()">Admin Login</button>
         <p id="alert" class="alert"></p>
 
-        <!-- Admin Page Section -->
+        <!-- Admin Page Section (Initially Hidden) -->
         <div id="admin-page" class="section">
-            <h2>Admin Page</h2>
-            <p>Welcome to the admin-only section. Only admins should access this!</p>
+            <h2>Admin Dashboard</h2>
+            <p>Welcome, Admin! Access your tools below.</p>
+
+            <!-- Record Voice Button -->
+            <button class="button" onclick="startVoiceRecording()">Record Voice</button>
+            <p id="voice-status" class="status-text">Press "Record Voice" to start recording.</p>
+
+            <!-- Admin Statistics Section -->
+            <div class="stats">
+                <h3>Statistics</h3>
+                <p>Active Users: <span class="stat-number">152</span></p>
+                <p>Page Views Today: <span class="stat-number">324</span></p>
+                <p>System Health: <span class="stat-good">Good</span></p>
+            </div>
         </div>
 
         <!-- Counter Section -->
