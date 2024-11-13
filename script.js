@@ -5,13 +5,27 @@ let role = urlParams.get('role') || 'user'; // Default to 'user' if no role para
 // Function to check access to the admin page
 function checkAccess() {
     if (role === 'admin') {
-        document.getElementById('admin-page').style.display = 'block';
-        document.getElementById('counter-section').style.display = 'block';
-        alert("Hello admin dearie, do you want chocolate?");
+        document.getElementById('admin-page').classList.add('show');
+        document.getElementById('counter-section').classList.add('show');
+        alert("Hello Admin! Ready to manage the site?");
     } else {
         alert("Access Denied. Only admins can view this page.");
-        document.getElementById('admin-page').style.display = 'none';
-        document.getElementById('counter-section').style.display = 'none';
+        document.getElementById('admin-page').classList.remove('show');
+        document.getElementById('counter-section').classList.remove('show');
+    }
+}
+
+// Voice Recording Simulation
+function startVoiceRecording() {
+    if (role === 'admin') {
+        document.getElementById("voice-status").innerText = "Recording in progress...";
+        alert("Recording started!");
+        setTimeout(() => {
+            document.getElementById("voice-status").innerText = "Recording complete!";
+            alert("Recording saved.");
+        }, 3000); // Simulates a 3-second recording
+    } else {
+        alert("Only admins can access this feature.");
     }
 }
 
@@ -20,19 +34,10 @@ function adminOnlyCounter() {
     if (role === 'admin') {
         counter++;
         document.getElementById("counter").innerText = counter;
-        alert("Hello admin dearie, do you want chocolate?");
     } else {
         alert("Only admins can access this feature.");
     }
 }
-
-// Simulate voice detection (press "V" to show the counter section)
-document.addEventListener("keydown", (event) => {
-    if (event.key === "v") {
-        alert("Voice command detected!");
-        document.getElementById('counter-section').style.display = 'block';
-    }
-});
 
 // Initialize counter
 let counter = 0;
