@@ -69,21 +69,19 @@ p {
     transition: opacity 0.5s, transform 0.5s;
 }
 
-/* Admin Page Section Styling */
-#admin-page {
-    background-color: #e6f7ff;
+/* Show Sections */
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Counter Section Styling */
-#counter-section {
-    background-color: #fffbea;
-}
-
-/* Counter Text Styling */
-.counter-text {
-    font-size: 2em;
-    font-weight: bold;
-    color: #4a4a4a;
+/* News Panel Styling */
+.news-panel {
+    background-color: #f1f9ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Alert Box Styling */
@@ -93,8 +91,22 @@ p {
     margin-top: 20px;
 }
 
-/* Smooth Reveal for Sections */
-.section.show {
-    opacity: 1;
-    transform: translateY(0);
+/* Admin Stats */
+.stats {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.stats h3 {
+    margin-bottom: 10px;
+}
+
+.stat-number {
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+.stat-good {
+    color: #5cb85c;
+    font-weight: bold;
 }
