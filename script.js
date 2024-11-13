@@ -7,7 +7,7 @@ function checkAccess() {
     if (role === 'admin') {
         document.getElementById('admin-page').classList.add('show');
         document.getElementById('counter-section').classList.add('show');
-        alert("Hello Admin! Ready to manage the site?");
+        alert("Hello admin dearie, do you want chocolate?");
     } else {
         alert("Access Denied. Only admins can view this page.");
         document.getElementById('admin-page').classList.remove('show');
@@ -18,11 +18,10 @@ function checkAccess() {
 // Voice Recording Simulation
 function startVoiceRecording() {
     if (role === 'admin') {
-        document.getElementById("voice-status").innerText = "Recording in progress...";
+        document.getElementById("voice-status").innerText = "Recording...";
         alert("Recording started!");
         setTimeout(() => {
-            document.getElementById("voice-status").innerText = "Recording complete!";
-            alert("Recording saved.");
+            document.getElementById("voice-status").innerText = "Recording complete.";
         }, 3000); // Simulates a 3-second recording
     } else {
         alert("Only admins can access this feature.");
